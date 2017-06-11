@@ -2,9 +2,11 @@ article, aside, footer, header, hgroup, menu, nav, section
 { 
   display: block;
 }
+body {
+  background-image: url(http://cafefiles.naver.net/20100701_113/moolgae6415_1277967426829uwYiW_jpg/wavyandgreen_minicandy__moolgae6415.jpg); background-size: 100% 100%;
+}
 
 body {
-  background:#5D5D5D; /*#967ADC;*/
   font: .81em/150% Arial, Helvetica, sans-serif;
   color: #666;
 }
