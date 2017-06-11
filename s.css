@@ -75,14 +75,14 @@ h6 {
 }
 #site-logo a {
   font: bold 30px/100% Arial, Helvetica, sans-serif;
-  color: #fff;
+  color: #000000;
   text-decoration: none;
 }
 
 
 #site-description {
   font: italic 100%/130%, Times, serif;
-  color: #fff;
+  color: #000000;
   position: absolute;
   top: 55px;
 }
