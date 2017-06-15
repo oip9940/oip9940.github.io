@@ -1,0 +1,130 @@
+<DOCTYPE HTML>
+<HTML>
+<HEAD>
+   <title>메인페이지</title>
+   <meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="mystyle.css"/>
+   <style>
+
+@keyframes target_image {
+0% { transform: rotate(-10deg); }
+50% { transform: rotate(25deg) }
+100% { transform: rotate(-10deg); }
+}
+   #board_mainpage{
+         position: absolute;
+         left: 5%;
+         right: 5%;
+         width: 90%;
+         height: 100%;
+         overflow: scroll;
+         background-color: none;
+
+   }
+
+</style>   
+               
+</HEAD>
+<body>
+<div id="board_mainpage">
+   <div style="width:1000px" ><!--테두리 div-->
+   <header>
+<br>   
+   <center><a href="mainpage.html"><img src="logo.jpg" class="hand" width="200px" height="130px"  /><br>
+   <!--이미지누르면 메인페이지로 이동하게 만들것-->
+      </a></center>
+   </header>
+
+   <nav>
+      <ul>
+      <li><a href="mainpage.html">Home</a></li>
+      <li><a href="aboutus.html">AboutUs</a></li>
+      <li><a href="도면창고.html">게시판(자유글)</a></li>
+      <li><a href="작품사진.html">작품사진</a></li>
+      <li><a href="수강신청.html">수강신청</a></li>
+      </ul>
+   </nav>
+
+   <aside id="left"><br>
+   <h3><center>새로나왔어요!</center></h3>
+      <ul>
+      <li><a target="iframe1" href="뜨게실.html">뜨게실</a></li>
+      <li><a target="iframe1" href="바늘.html">바늘</a></li>
+      <li><a target="iframe1" href="기타부자재.html">기타 부자재</a></li>
+         </ul>
+         <center>↓</center>
+         <iframe name="iframe1" src="뜨게실.html" width="175px" height="220px" seamless></iframe>
+   </aside>
+
+   <section id="main">
+      
+      <article id="article2">
+      <br><hr/>
+      <img src="가게1.jpg" id=mainImage alt="가게" style="width:100px height:120px;">
+<!--사진 사이즈 포토샾으로 쭐여야할듯 함.-->
+
+
+
+<script>
+
+
+var myImage=document.getElementById("mainImage");
+
+var imageArray=["가게1.jpg","가게2.jpg","가게3.jpg","가게4.jpg"];
+
+var imageIndex=0;
+
+
+
+
+function changeImage(){
+
+   myImage.setAttribute("src",imageArray[imageIndex]);
+
+   imageIndex++;
+
+   if(imageIndex>=imageArray.length){
+
+      imageIndex=0;
+
+   }
+
+}
+
+setInterval(changeImage,2500);
+
+</script>
+      </article>
+   </section>
+
+   <aside id="right">
+
+
+   <div id="login">
+   <br><br>
+      <h3>로그인하실래요?</h3>
+         <form action="#"><!--로그인데이터처리하는 자바스크립트 작성-->
+         아이디 : <input type="text"/><br>
+         비밀번호 : <input type="password"/><br>
+         <input type="submit" value="로그인">
+         <br>
+         <a href="login.html" target="_blank" id="register"><!--회원가입페이지작성-->
+         회원가입 </a><br>
+
+         
+         </form>
+         </div>
+         <div id="clock"><iframe name="clock1" src="시계.html" width="200px" height="200px"></div>
+         </aside>
+
+            <footer>
+            (주)아이엔 니트 I&KNIT<br>
+            서울특별시 광진구 광장동 극동아파트 상가 B107호<br>
+            02)6212-2238<br>
+            010-2988-9595<br>
+            </footer>
+</div>
+
+</div>
+</body>
+</HTML>
